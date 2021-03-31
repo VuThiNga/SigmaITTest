@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (5.4.1)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - ObjectMapper (3.5.3)
+
+DEPENDENCIES:
+  - Moya
+  - ObjectMapper (~> 3.5)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Moya
+    - ObjectMapper
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+
+PODFILE CHECKSUM: 1188fe18daea231b6f49d7d7112b100d55fbad65
+
+COCOAPODS: 1.10.0

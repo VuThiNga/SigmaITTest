@@ -1,0 +1,6 @@
+framework module Pods_SigmaITTest_SigmaITTestUITests {
+  umbrella header "Pods-SigmaITTest-SigmaITTestUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
