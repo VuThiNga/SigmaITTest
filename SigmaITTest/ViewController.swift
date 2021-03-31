@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     var sharedResources = [String]() {
         didSet {
-            if self.sharedResources.count >= limitNumber {
+            if self.sharedResources.count == limitNumber {
                 self.getDataFromApi()
             }
         }
@@ -85,7 +85,14 @@ class ViewController: UIViewController {
 
     func getDataFromApi(){
         var input: [String:Any] = [:]
-        input["codes"] = sharedResources
+        DispatchQueue.global().async() {
+            self.semaphore.wait()
+            defer {
+                self.semaphore.signal()
+            }
+            input["codes"] = self.sharedResources
+            self.sharedResources.removeAll()
+        }
         self.getDatas(input: input)
     }
     
